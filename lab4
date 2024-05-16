@@ -1,0 +1,18 @@
+# Ədədi massiv yaratmaq və fayla yazmaq
+numbers = [3, 8, 12, 4, 9, 7, 6, 10, 15]
+with open("numbers.txt", "w") as file:
+    for num in numbers:
+        file.write(str(num) + "\n")
+
+# X>5 şərtinə uyğun ədədləri seçmək və yeni fayla yazmaq
+selected_numbers = [num for num in numbers if num > 5]
+with open("selected_numbers.txt", "w") as file:
+    for num in selected_numbers:
+        file.write(str(num) + "\n")
+
+# Seçilmiş ədədlərin cəmini hesablamaq
+total = sum(selected_numbers)
+
+# Nəticəni çap etmək
+print("Seçilmiş ədədlər:", selected_numbers)
+print("Cəmi:", total)
